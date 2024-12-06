@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Henny+Penny&display=swap');
+:root {
+    --main-bg-color: rgb(233, 93, 93);
+    --box-color: #FEC0C0
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--main-bg-color);
+}
+.title-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+h1 {
+   color: white;
+   font-family: Henny Penny;
+}
+.boxes-table{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 0 2vw;
+    column-gap: 2vw;
+    row-gap: 2vw;
+}
+.div-box {
+    font-family: Hachi Maru Pop;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--box-color);
+    height: 20vh;
+}
