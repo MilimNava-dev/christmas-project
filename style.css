@@ -56,7 +56,7 @@ h1 {
     animation: shake-scale-pause 4s infinite;
 }
 
-.div-box:hover {
+.avalible-hover:hover {
     animation: shake-scale 0.5s ease-in-out;
 }
 
@@ -96,5 +96,41 @@ h1 {
     }
     100% {
         transform: scale(1) rotate(0deg);
+    }
+}
+
+
+.present-div {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 15rem;
+    top: 30%;
+    left: 30%;
+    height: 40%;
+    width: 40%;
+    border-radius: 20%;
+    background-color:  rgb(255, 221, 221);
+    box-shadow: 0px 0px 13px 15px rgb(255, 221, 221);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.present-div.visible {
+    display: flex;
+    animation: mini-explosion 0.3s ease-out;
+}
+
+@keyframes mini-explosion {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.5); /* Agranda el objeto */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño normal */
     }
 }
