@@ -39,4 +39,27 @@ h1 {
     align-items: center;
     background-color: var(--box-color);
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.div-box:hover {
+    animation: shake-scale 0.5s ease-in-out;
+}
+
+@keyframes shake-scale {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(-5deg);
+    }
+    75% {
+        transform: scale(1.1) rotate(3deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
 }
