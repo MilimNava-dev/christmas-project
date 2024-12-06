@@ -23,7 +23,7 @@ h1 {
 .boxes-table{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin: 0 2vw;
+    margin: 0 4vw;
     column-gap: 2vw;
     row-gap: 2vw;
 }
@@ -33,5 +33,5 @@ h1 {
     justify-content: center;
     align-items: center;
     background-color: var(--box-color);
-    height: 20vh;
+    height: 19vh;
 }
