@@ -58,3 +58,47 @@ todayBox.addEventListener('click', () => {
     })
 })
     
+function givePresent() {
+    let presents = [
+        "&#x1F36C;", //Candy
+        "&#x1F3C2;", //Snowboarder
+        "&#x1F47C;", //Baby Angel
+        "&#x1F381;", //Wrapped Gift
+        "&#x1F389;", //Party popper
+        "&#x1F3BF;", //Ski and ski boot
+        "&#x1F38A;", //Confetti ball
+        "&#x1F387;", //Sparkler
+        "&#x1F36B;", //Chocolate bar
+        "&#x1F9E7;", //Red envelope
+        "&#x1F36A;", //Cookie
+        "&#x1F36D;", //Lollipop
+        "&#x1F936;", //Mrs. Claus
+        "&#x1F9E3;", //Scarf
+        "&#x1F370;", //Cake
+        "&#x1F9E6;", //Socks
+        "&#127876;", //Christmas tree
+        "&#x26C4;", //Snowman
+        "&#x1F9E5;", //Winter coat
+        "&#x1F462;", //Boots
+        "&#x1F941;", //Drum
+        "&#x1F37E;", //Bottle with popping cork 
+        "&#x1F385;", //Santa Claus //24
+        "&#x1F36E;", //Custard
+        "&#x1F37A;", //Beer mug 
+        "&#x2744;", //Snow flake
+        "&#x2603;", //Snowman with snow
+        "&#x1F386;", //Firewood
+        "&#x1F943;", //Tumbler glass
+        "&#x1F56F;", //Candle
+        "&#x1F328;", //Cloud with Snow
+        "&#x1F3BA;", //Trumpet
+        "&#x1F3B7;", //Saxophone
+        "&#x1FA97;", //Accordion
+        "&#x1F3BB;", //Violin
+        "&#x1F3B5;", //Musical note
+        "&#x1F3B6;", //Musical notes
+    ]
+    let todayPresent = presents[day - 1]
+    present.innerHTML = todayPresent;
+}
+givePresent();
