@@ -36,6 +36,10 @@ function today() {
         for (let i = day; i < 24; i++) {
             daysNotAvalible.push(i)
         }
+    } else {
+        for (let i = 0; i < 24; i++) {
+            daysNotAvalible.push(i)
+        }
     }
     return daysNotAvalible
 }
