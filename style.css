@@ -44,6 +44,9 @@ h1 {
     background-color: var(--box-color);
     border-radius: 8px;
     cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     transition: transform 0.3s ease;
 }
 
