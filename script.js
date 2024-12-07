@@ -150,3 +150,17 @@ playBgMusicButton.addEventListener('click', () => {
     bgAudio.volume = 0.6
 })
 
+function clickButtonEffect () {
+    allBoxes.forEach(box => {
+        box.addEventListener('click', () => {
+            box.classList.remove('today')
+            box.classList.remove('avalible-hover')
+            box.classList.add('click-animation')
+            box.addEventListener('animationend', () => {
+                box.classList.add('avalible-hover')
+                box.classList.remove('click-animation')
+            })
+        })
+    })
+}
+clickButtonEffect()
