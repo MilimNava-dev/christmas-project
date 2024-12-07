@@ -3,6 +3,10 @@ const present = document.querySelector('.present-div')
 const d = new Date();
 const day = d.getDate();
 const month = d.getMonth() + 1;
+const hoverAudio = document.querySelector('#hover-audio')
+const todayAudio = document.querySelector('#today-audio')
+const notAvalibleAudio = document.querySelector('#not-avalible-audio')
+const bgAudio = document.querySelector('#bg-audio')
 
 function createBoxes () {
     const daysNotAvalible = today()
@@ -13,7 +17,6 @@ function createBoxes () {
             <div class="div-box avalible-hover not-avalible">
                 ${i + 1}
             </div>`
-            continue
         } else if (i === day - 1) {
             html += `
             <div class="div-box avalible-hover today">
@@ -106,3 +109,41 @@ function givePresent() {
     present.innerHTML = todayPresent;
 }
 givePresent();
+
+function hover() {
+    allBoxes.forEach(box => {
+        box.addEventListener('mouseover', () => {
+            if (box.classList.contains('avalible-hover')) {
+                hoverAudio.currentTime = 0
+                hoverAudio.play()
+            }
+        })
+    })
+}
+hover()
+function todayClick() {
+    todayBox.addEventListener('click', () => {
+            todayAudio.currentTime = 0
+            todayAudio.play()
+        })
+}
+todayClick()
+function notAvalibleAudioClick() {
+    allBoxes.forEach(box => {
+        if (!box.classList.contains('today')) {
+            box.addEventListener('click', () => {
+                if (box.classList.contains('avalible-hover')) {
+                    notAvalibleAudio.currentTime = 0
+                    notAvalibleAudio.play()
+                }
+            })   
+        }
+    })
+}
+notAvalibleAudioClick()
+
+function bgAudioLoop() {
+    bgAudio.loop = true
+    bgAudio.play()
+}
+bgAudioLoop()
