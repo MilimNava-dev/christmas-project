@@ -7,6 +7,7 @@ const hoverAudio = document.querySelector('#hover-audio')
 const todayAudio = document.querySelector('#today-audio')
 const notAvalibleAudio = document.querySelector('#not-avalible-audio')
 const bgAudio = document.querySelector('#bg-audio')
+const playBgMusicButton = document.querySelector('.play-bg-music')
 
 function createBoxes () {
     const daysNotAvalible = today()
@@ -142,8 +143,10 @@ function notAvalibleAudioClick() {
 }
 notAvalibleAudioClick()
 
-function bgAudioLoop() {
-    bgAudio.loop = true
+playBgMusicButton.addEventListener('click', () => {
+    playBgMusicButton.style.display = 'none'
     bgAudio.play()
-}
-bgAudioLoop()
+    bgAudio.loop = true 
+    bgAudio.volume = 0.6
+})
+
