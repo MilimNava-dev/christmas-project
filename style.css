@@ -124,6 +124,7 @@ h1 {
 .present-div.visible {
     display: flex;
     animation: mini-explosion 0.3s ease-out;
+    z-index: 100000000000000;
 }
 
 @keyframes mini-explosion {

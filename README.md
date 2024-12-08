@@ -43,6 +43,7 @@ Como es un calendario de Adviento he querido utilizar colores navideños como ro
 En este proyecto he utilizado dos fuentes sacadas de la API de Google: [Google Fonts](https://fonts.google.com/).
 * [Hachi Maru Pop](https://fonts.google.com/specimen/Hachi+Maru+Pop) → Números
 * [Henny Penny](https://fonts.google.com/specimen/Henny+Penny) → Título
+
 Las fuentes han sido insertadas en el CSS con el `@import`
 ```
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Henny+Penny&display=swap');
